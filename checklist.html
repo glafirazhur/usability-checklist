@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId, source) {
+            const checkboxes = document.querySelectorAll(`#${sectionId} input[type="checkbox"]`);
+            checkboxes.forEach(checkbox => checkbox.checked = source.checked);
+        }
+    </script>
+</head>
+<body>
+    <h1>UX Checklist for E-commerce Website</h1>
+
+    <div id="main-page" class="section">
+        <h2>Main Page</h2>
+        <label><input type="checkbox" onclick="toggleSection('main-page', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Fast page loading (no more than 3 seconds)</label></li>
+            <li><label><input type="checkbox"> Correct display on various devices (desktop, tablet, smartphone)</label></li>
+            <li><label><input type="checkbox"> Clear and logical menu structure</label></li>
+            <li><label><input type="checkbox"> Visibility and accessibility of the search button</label></li>
+            <li><label><input type="checkbox"> Quick access to main product categories</label></li>
+            <li><label><input type="checkbox"> Attractive and modern design</label></li>
+            <li><label><input type="checkbox"> Clear and contrasting fonts</label></li>
+            <li><label><input type="checkbox"> Correct display of images and graphics</label></li>
+            <li><label><input type="checkbox"> Availability of main promotions and offers</label></li>
+            <li><label><input type="checkbox"> Visibility of contacts and delivery/payment information</label></li>
+        </ul>
+    </div>
+
+    <div id="category-page" class="section">
+        <h2>Category Page</h2>
+        <label><input type="checkbox" onclick="toggleSection('category-page', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Easily accessible and understandable filters</label></li>
+            <li><label><input type="checkbox"> Ability to sort products by different criteria (price, popularity, etc.)</label></li>
+            <li><label><input type="checkbox"> Clear and correct display of product images</label></li>
+            <li><label><input type="checkbox"> Visibility of main characteristics and price</label></li>
+            <li><label><input type="checkbox"> Ease and convenience of using filters</label></li>
+            <li><label><input type="checkbox"> No delays when applying filters</label></li>
+        </ul>
+    </div>
+
+    <div id="product-page" class="section">
+        <h2>Product Page</h2>
+        <label><input type="checkbox" onclick="toggleSection('product-page', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Clear and high-quality product images</label></li>
+            <li><label><input type="checkbox"> Detailed product description</label></li>
+            <li><label><input type="checkbox"> Availability of price, discounts, stock information</label></li>
+            <li><label><input type="checkbox"> Visibility and accessibility of the "Add to Cart" button</label></li>
+            <li><label><input type="checkbox"> User-friendly interface for selecting product quantity, size, and other parameters</label></li>
+            <li><label><input type="checkbox"> Availability of customer reviews</label></li>
+            <li><label><input type="checkbox"> Visibility of product rating</label></li>
+        </ul>
+    </div>
+
+    <div id="cart" class="section">
+        <h2>Cart</h2>
+        <label><input type="checkbox" onclick="toggleSection('cart', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Clear and user-friendly cart interface</label></li>
+            <li><label><input type="checkbox"> Visibility of added products, their quantity, and total cost</label></li>
+            <li><label><input type="checkbox"> Ability to change the quantity of products</label></li>
+            <li><label><input type="checkbox"> Ability to remove products from the cart</label></li>
+            <li><label><input type="checkbox"> Ability to enter promo codes</label></li>
+            <li><label><input type="checkbox"> Automatic application of discounts</label></li>
+        </ul>
+    </div>
+
+    <div id="checkout" class="section">
+        <h2>Checkout</h2>
+        <label><input type="checkbox" onclick="toggleSection('checkout', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Clear and user-friendly order form</label></li>
+            <li><label><input type="checkbox"> Visibility of all necessary fields (address, contact details, delivery and payment method)</label></li>
+            <li><label><input type="checkbox"> Availability of various payment methods (cards, e-wallets, etc.)</label></li>
+            <li><label><input type="checkbox"> Ease and security of entering payment details</label></li>
+            <li><label><input type="checkbox"> Visibility of all order details before confirmation</label></li>
+            <li><label><input type="checkbox"> Clear and user-friendly interface for completing the purchase</label></li>
+        </ul>
+    </div>
+
+    <div id="account" class="section">
+        <h2>Account</h2>
+        <label><input type="checkbox" onclick="toggleSection('account', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Simple and quick registration</label></li>
+            <li><label><input type="checkbox"> Easy login to the account</label></li>
+            <li><label><input type="checkbox"> Visibility of order history</label></li>
+            <li><label><input type="checkbox"> Ability to view the status of current orders</label></li>
+            <li><label><input type="checkbox"> Ability to change personal data</label></li>
+            <li><label><input type="checkbox"> User-friendly interface for adding and changing delivery addresses</label></li>
+        </ul>
+    </div>
+
+    <div id="additional" class="section">
+        <h2>Additional</h2>
+        <label><input type="checkbox" onclick="toggleSection('additional', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Availability of a visible and accessible feedback form</label></li>
+            <li><label><input type="checkbox"> Quick response to user requests</label></li>
+            <li><label><input type="checkbox"> Correct display and operation of all site elements on various devices and browsers</label></li>
+            <li><label><input type="checkbox"> Usability testing with real users to identify issues and shortcomings</label></li>
+        </ul>
+    </div>
+
+    <div id="common-errors" class="section">
+        <h2>Common UX Mistakes</h2>
+        <label><input type="checkbox" onclick="toggleSection('common-errors', this)"> Select All</label>
+        <ul>
+            <li><label><input type="checkbox"> Slow page loading</label></li>
+            <li><label><input type="checkbox"> Unclear navigation</label></li>
+            <li><label><input type="checkbox"> Lack of adaptive design</label></li>
+            <li><label><input type="checkbox"> Intrusive pop-ups</label></li>
+            <li><label><input type="checkbox"> Unclear or too small buttons</label></li>
+            <li><label><input type="checkbox"> Hidden information</label></li>
+            <li><label><input type="checkbox"> Unclear or incomplete product descriptions</label></li>
+            <li><label><input type="checkbox"> Complicated checkout process</label></li>
+            <li><label><input type="checkbox"> Inconvenient forms</label></li>
+            <li><label><input type="checkbox"> Unclear input errors</label></li>
+            <li><label><input type="checkbox"> Poor search function</label></li>
+            <li><label><input type="checkbox"> Lack of visual hierarchy</label></li>
+            <li><label><input type="checkbox"> Poor quality content</label></li>
+            <li><label><input type="checkbox"> Lack of feedback</label></li>
+            <li><label><input type="checkbox"> Lack of accessibility</label></li>
+            <li><label><input type="checkbox"> Unintuitive interface elements</label></li>
+            <li><label><input type="checkbox"> Lack of trust</label></li>
+            <li><label><input type="checkbox"> Mismatch of user expectations</label></li>
+        </ul>
+    </div>
+
+</body>
+</html>

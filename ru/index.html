@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Чеклист</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId, source) {
+            const checkboxes = document.querySelectorAll(`#${sectionId} input[type="checkbox"]`);
+            checkboxes.forEach(checkbox => checkbox.checked = source.checked);
+        }
+    </script>
+</head>
+<body>
+    <h1>UX Чеклист для e-commerce сайта</h1>
+
+    <div id="main-page" class="section">
+        <h2>Главная страница</h2>
+        <label><input type="checkbox" onclick="toggleSection('main-page', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Быстрая загрузка страницы (не более 3 секунд)</label></li>
+            <li><label><input type="checkbox"> Корректное отображение на различных устройствах (десктоп, планшет, смартфон)</label></li>
+            <li><label><input type="checkbox"> Понятная и логичная структура меню</label></li>
+            <li><label><input type="checkbox"> Видимость и доступность кнопки поиска</label></li>
+            <li><label><input type="checkbox"> Быстрый доступ к основным категориям товаров</label></li>
+            <li><label><input type="checkbox"> Привлекательный и современный дизайн</label></li>
+            <li><label><input type="checkbox"> Четкие и контрастные шрифты</label></li>
+            <li><label><input type="checkbox"> Корректное отображение изображений и графики</label></li>
+            <li><label><input type="checkbox"> Наличие основных акций и предложений</label></li>
+            <li><label><input type="checkbox"> Видимость контактов и информации о доставке и оплате</label></li>
+        </ul>
+    </div>
+
+    <div id="category-page" class="section">
+        <h2>Страница категории товаров</h2>
+        <label><input type="checkbox" onclick="toggleSection('category-page', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Легко доступные и понятные фильтры</label></li>
+            <li><label><input type="checkbox"> Возможность сортировки товаров по разным критериям (цена, популярность и т.д.)</label></li>
+            <li><label><input type="checkbox"> Четкое и корректное отображение изображений товаров</label></li>
+            <li><label><input type="checkbox"> Видимость основных характеристик и цены</label></li>
+            <li><label><input type="checkbox"> Простота и удобство использования фильтров</label></li>
+            <li><label><input type="checkbox"> Отсутствие задержек при применении фильтров</label></li>
+        </ul>
+    </div>
+
+    <div id="product-page" class="section">
+        <h2>Страница товара</h2>
+        <label><input type="checkbox" onclick="toggleSection('product-page', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Четкие и качественные изображения товара</label></li>
+            <li><label><input type="checkbox"> Подробное описание товара</label></li>
+            <li><label><input type="checkbox"> Наличие информации о цене, скидках, наличии на складе</label></li>
+            <li><label><input type="checkbox"> Видимость и доступность кнопки "Добавить в корзину"</label></li>
+            <li><label><input type="checkbox"> Понятный и удобный интерфейс для выбора количества товара, размера и других параметров</label></li>
+            <li><label><input type="checkbox"> Наличие отзывов покупателей</label></li>
+            <li><label><input type="checkbox"> Видимость рейтинга товара</label></li>
+        </ul>
+    </div>
+
+    <div id="cart" class="section">
+        <h2>Корзина</h2>
+        <label><input type="checkbox" onclick="toggleSection('cart', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Понятный и удобный интерфейс корзины</label></li>
+            <li><label><input type="checkbox"> Видимость добавленных товаров, их количества и общей стоимости</label></li>
+            <li><label><input type="checkbox"> Возможность изменения количества товаров</label></li>
+            <li><label><input type="checkbox"> Возможность удаления товаров из корзины</label></li>
+            <li><label><input type="checkbox"> Возможность ввода промокодов</label></li>
+            <li><label><input type="checkbox"> Автоматическое применение скидок</label></li>
+        </ul>
+    </div>
+
+    <div id="checkout" class="section">
+        <h2>Оформление заказа</h2>
+        <label><input type="checkbox" onclick="toggleSection('checkout', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Понятная и удобная форма для ввода данных</label></li>
+            <li><label><input type="checkbox"> Видимость всех необходимых полей (адрес, контактные данные, способ доставки и оплаты)</label></li>
+            <li><label><input type="checkbox"> Наличие различных способов оплаты (карты, электронные кошельки и т.д.)</label></li>
+            <li><label><input type="checkbox"> Простота и безопасность ввода платежных данных</label></li>
+            <li><label><input type="checkbox"> Видимость всех данных заказа перед подтверждением</label></li>
+            <li><label><input type="checkbox"> Понятный и удобный интерфейс для завершения покупки</label></li>
+        </ul>
+    </div>
+
+    <div id="account" class="section">
+        <h2>Личный кабинет</h2>
+        <label><input type="checkbox" onclick="toggleSection('account', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Простая и быстрая регистрация</label></li>
+            <li><label><input type="checkbox"> Легкий вход в личный кабинет</label></li>
+            <li><label><input type="checkbox"> Видимость истории заказов</label></li>
+            <li><label><input type="checkbox"> Возможность просмотра статуса текущих заказов</label></li>
+            <li><label><input type="checkbox"> Возможность изменения личных данных</label></li>
+            <li><label><input type="checkbox"> Удобный интерфейс для добавления и изменения адресов доставки</label></li>
+        </ul>
+    </div>
+
+    <div id="additional" class="section">
+        <h2>Дополнительно</h2>
+        <label><input type="checkbox" onclick="toggleSection('additional', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Наличие видимой и доступной формы обратной связи</label></li>
+            <li><label><input type="checkbox"> Быстрая реакция на запросы пользователей</label></li>
+            <li><label><input type="checkbox"> Корректное отображение и работа всех элементов сайта на различных устройствах и браузерах</label></li>
+            <li><label><input type="checkbox"> Проведение тестов с реальными пользователями для выявления проблем и недостатков</label></li>
+        </ul>
+    </div>
+
+    <div id="common-errors" class="section">
+        <h2>Частые UX ошибки</h2>
+        <label><input type="checkbox" onclick="toggleSection('common-errors', this)"> Выбрать все</label>
+        <ul>
+            <li><label><input type="checkbox"> Медленная загрузка страницы</label></li>
+            <li><label><input type="checkbox"> Непонятная навигация</label></li>
+            <li><label><input type="checkbox"> Отсутствие адаптивного дизайна</label></li>
+            <li><label><input type="checkbox"> Навязчивые всплывающие окна</label></li>
+            <li><label><input type="checkbox"> Непонятные или слишком мелкие кнопки</label></li>
+            <li><label><input type="checkbox"> Скрытая информация</label></li>
+            <li><label><input type="checkbox"> Непонятные или неполные описания товаров</label></li>
+            <li><label><input type="checkbox"> Сложный процесс оформления заказа</label></li>
+            <li><label><input type="checkbox"> Неудобные формы</label></li>
+            <li><label><input type="checkbox"> Неочевидные ошибки ввода</label></li>
+            <li><label><input type="checkbox"> Плохая поисковая функция</label></li>
+            <li><label><input type="checkbox"> Недостаток визуальной иерархии</label></li>
+            <li><label><input type="checkbox"> Плохое качество контента</label></li>
+            <li><label><input type="checkbox"> Недостаток обратной связи</label></li>
+            <li><label><input type="checkbox"> Отсутствие доступности</label></li>
+            <li><label><input type="checkbox"> Неинтуитивные элементы интерфейса</label></li>
+            <li><label><input type="checkbox"> Отсутствие доверия</label></li>
+            <li><label><input type="checkbox"> Несоответствие ожиданиям пользователей</label></li>
+        </ul>
+    </div>
+
+</body>
+</html>
